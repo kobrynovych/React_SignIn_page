@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+.app {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1440px;
+    height: 900px;
+    // background: #FFF;
+    background: rgb(109, 70, 70);
+}
+.carousel_wrapper  {
+    width: 798px;
+    height: 860px;
+    margin: 20px;
+    background: #065BEA;
+    border-radius: 15px;
+}
+
+.content_wrapper {
+    position: absolute;
+    max-width: 100%;
+    // width: 798px;
+    height: 860px;
+    // left: 20px;
+    top: 51px;
+    right: 120px;
+    width: 420px;
+    // height: 656px;
+    // left: 900px;
+    // top: 194px;
+    background: #fff;
+
+}
