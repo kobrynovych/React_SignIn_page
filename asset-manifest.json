@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/React_SignIn_page/static/css/main.de777bfc.chunk.css",
+    "main.js": "/React_SignIn_page/static/js/main.9f79ac32.chunk.js",
+    "main.js.map": "/React_SignIn_page/static/js/main.9f79ac32.chunk.js.map",
+    "runtime-main.js": "/React_SignIn_page/static/js/runtime-main.235edf16.js",
+    "runtime-main.js.map": "/React_SignIn_page/static/js/runtime-main.235edf16.js.map",
+    "static/css/2.8afe59ef.chunk.css": "/React_SignIn_page/static/css/2.8afe59ef.chunk.css",
+    "static/js/2.0e0854fa.chunk.js": "/React_SignIn_page/static/js/2.0e0854fa.chunk.js",
+    "static/js/2.0e0854fa.chunk.js.map": "/React_SignIn_page/static/js/2.0e0854fa.chunk.js.map",
+    "static/js/3.c223c1ed.chunk.js": "/React_SignIn_page/static/js/3.c223c1ed.chunk.js",
+    "static/js/3.c223c1ed.chunk.js.map": "/React_SignIn_page/static/js/3.c223c1ed.chunk.js.map",
+    "index.html": "/React_SignIn_page/index.html",
+    "static/css/2.8afe59ef.chunk.css.map": "/React_SignIn_page/static/css/2.8afe59ef.chunk.css.map",
+    "static/css/main.de777bfc.chunk.css.map": "/React_SignIn_page/static/css/main.de777bfc.chunk.css.map",
+    "static/js/2.0e0854fa.chunk.js.LICENSE.txt": "/React_SignIn_page/static/js/2.0e0854fa.chunk.js.LICENSE.txt",
+    "static/media/bg.bc8d19cd.svg": "/React_SignIn_page/static/media/bg.bc8d19cd.svg",
+    "static/media/img1.6c429b49.svg": "/React_SignIn_page/static/media/img1.6c429b49.svg",
+    "static/media/img2.9939380d.svg": "/React_SignIn_page/static/media/img2.9939380d.svg",
+    "static/media/img3.532313bd.svg": "/React_SignIn_page/static/media/img3.532313bd.svg",
+    "static/media/slick-theme.css": "/React_SignIn_page/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.235edf16.js",
+    "static/css/2.8afe59ef.chunk.css",
+    "static/js/2.0e0854fa.chunk.js",
+    "static/css/main.de777bfc.chunk.css",
+    "static/js/main.9f79ac32.chunk.js"
+  ]
+}
