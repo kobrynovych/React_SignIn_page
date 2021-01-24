@@ -2,9 +2,9 @@ import React from 'react'
 import classes from './styles.module.scss'
 import bgImage from '../../assets/img/bg.svg'
 import Slideshow from '../Slideshow/index';
-import Content from './../Content/index';
+import Content from '../Content/index';
 
-export default function SignIn() {
+const SignIn: React.FC = () => {
     return (
         <main className={classes.wrapper}>
             <div className={classes.carousel_wrapper} style={{backgroundImage: `url(${bgImage})`}}>
@@ -16,4 +16,4 @@ export default function SignIn() {
         </main>
     )
 }
-
+export default SignIn;

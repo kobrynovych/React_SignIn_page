@@ -2,19 +2,25 @@ import React, { useState } from 'react'
 import logo from '../../assets/img/logo.jpg'
 import classes from './styles.module.scss'
 
-export default function Content() {
+const Content: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isFocusEmail, setIsFocusEmail] = useState(false);
+  const [isFirstFocusEmail, setIsFirstFocusEmail] = useState(false);
   const [isFocusPassword, setIsFocusPassword] = useState(false);
-  const isValidEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i.test(email);
+  const [isFirstFocusPassword, setIsFirstFocusPassword] = useState(false);
+
+  const isValidEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i.test(email);  
+  const emailClassName = (!isValidEmail && isFirstFocusEmail && !isFocusEmail) ? `${classes.input_invalid}` : (isValidEmail) ? `${classes.input_valid}` : '';
+  const passwordClassName = (password.length < 4 && isFirstFocusPassword) ? `${classes.input_invalid}` : (password.length >= 4) ? `${classes.input_valid}` : '';
   const btnClassName = (isValidEmail && password.length>3) ? `${classes.btn} ${classes.active_btn}` : `${classes.btn}`;
-  const handleSubmit = (e) => {
+  
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
   }
-  const handleChange = (e) => {
-    if (e.target.name === 'email') setEmail(e.target.value)
-    if (e.target.name === 'password') setPassword(e.target.value)
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    if (e?.currentTarget?.name === 'email') setEmail(e?.currentTarget?.value)
+    if (e?.currentTarget?.name === 'password') setPassword(e?.currentTarget?.value)
   }
     return (
       <>
@@ -23,20 +29,19 @@ export default function Content() {
         <h2 className={classes.form_title}>Sign in</h2>
         <p className={classes.form_text}>Dont't have an Xcellerate account?</p>
         <a href='#' className={classes.form_link}>Sign up now</a>
-        <form className={classes.form} onSubmit={handleSubmit} autoComplete="off">
+        <form className={classes.form} onSubmit={handleSubmit}>
           <label className={classes.label} htmlFor="email">
             <span>Email</span>
-            {!isValidEmail && !isFocusEmail && (<span className={classes.mess_err}>Invalid email</span>)}
+            {!isValidEmail && isFirstFocusEmail && !isFocusEmail && (<span className={classes.mess_err}>Invalid email</span>)}
           </label>
           <input
             id="email"
             name="email"
             type="email"
-            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
             required
-            autoComplete="off"
+            className={emailClassName}
             onBlur={() => setIsFocusEmail(false)}
-            onFocus={() => setIsFocusEmail(true)}
+            onFocus={() => {setIsFirstFocusEmail(true); setIsFocusEmail(true)}}
             onChange={handleChange}
             value={email}
           />
@@ -49,11 +54,11 @@ export default function Content() {
             id="password"
             name="password"
             type="password"
+            className={passwordClassName}
             required
-            minLength="4" 
-            autoComplete="off"
+            minLength={4}
             onChange={handleChange}
-            onFocus={() => setIsFocusPassword(true)}
+            onFocus={() => {setIsFirstFocusPassword(true); setIsFocusPassword(true)}}
             value={password}
           />
           <button className={btnClassName} type="submit">Sing in</button>
@@ -64,3 +69,4 @@ export default function Content() {
       </>
     )
 }
+export default Content;

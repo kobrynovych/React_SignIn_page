@@ -75,20 +75,14 @@
         color: $black_primary;
         outline: none;
         border-radius: 8px;
-    }
-    input:required {
-        background: #F6F7FA;       
+        background: #F6F7FA;
         border: 1px solid $primary_blue;
     }
-    input[type=email]:not(:focus):invalid {
-        background: #FFFFFF;
+    .input_invalid {
+        background: #FFF;
         border: 1px solid #FF4B26;
     }
-    input[type=password]:required:invalid {
-        background: #FFFFFF;
-        border: 1px solid #FF4B26;
-    }
-    input:valid {
+    .input_valid {
         background: #F6F7FA;        
         border: 1px solid #6FCF97;
     }

@@ -8,8 +8,20 @@ import image1 from '../../assets/img/img1.svg'
 import image2 from '../../assets/img/img2.svg'
 import image3 from '../../assets/img/img3.svg'
 
-export default function Slideshow() {
-    const settings = {
+const Slideshow: React.FC = () => {
+    interface Settings {
+        dots: boolean
+        arrows: boolean 
+        infinite: boolean 
+        speed: number
+        slidesToShow: number
+        slidesToScroll: number
+        autoplay: boolean 
+        autoplaySpeed: number
+        pauseOnHover: boolean 
+        initialSlide: number
+    }
+    const settings: Settings = {
         dots: true,
         arrows: false,
         infinite: true,
@@ -18,7 +30,7 @@ export default function Slideshow() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-        pauseOnHover: true,
+        pauseOnHover: false,
         initialSlide: 0
       };
     return (
@@ -46,3 +58,4 @@ export default function Slideshow() {
       </>
     )
 }
+export default Slideshow;
