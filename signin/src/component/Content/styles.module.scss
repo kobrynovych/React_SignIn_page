@@ -1,3 +1,5 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/base";
 .logo {
     width: 22.53px;
     height: 31px;
@@ -13,99 +15,123 @@
 .form_title {
     margin-top: 100px;
     margin-bottom: 12px;
-    font-family: Montserrat;
-    font-style: normal;
     font-weight: bold;
     font-size: 28px;
     line-height: 34px;
-    color: #333;
+    color: $black_primary;
 }
 .form_text {
     display: inline-block;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
     font-size: 14px;
     line-height: 24px;    
-    color: #333;
+    color: $black_primary;
     padding-right: 5px;
     margin-top: 0;
     margin-bottom: 64px;
 }
 .form_link {
     display: inline-block;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
     font-size: 14px;
     line-height: 24px;
-    color: #065BEA;
+    color: $primary_blue;
+    text-decoration: none;
+    &:hover {
+        color: #0A4AB6;
+    }
 }
 .form {
     label {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 600;
         font-size: 14px;
         line-height: 24px;
-        color: #333;
+        color: $black_primary;
         display: block;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .label_password {
+        position: relative;
+    }
+    .placholder {
+        position: absolute;
+        right: 20px;
+        top: 36px;
+        font-size: 14px;
+        line-height: 24px;            
+        text-align: center;
+        color: $grey_text;
+        z-index: 1;
+        &:hover {
+            color: $black_primary;
+            cursor: text;
+        }
     }
     input {
         padding: 15px 20px;
         width: 100%;
         margin-bottom: 30px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 600;
         font-size: 14px;
         line-height: 17px;
-        color: #333;
+        color: $black_primary;
         outline: none;
-    }
-    input:-webkit-autofill {
-        border: 1px solid #E0E5E9;
         border-radius: 8px;
-        -webkit-text-fill-color: #333;
-        -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-        transition: background-color 5000s ease-in-out 0s;
     }
-    input:-webkit-autofill:hover, 
-    input:-webkit-autofill:focus {
+    input:required {
+        background: #F6F7FA;       
+        border: 1px solid $primary_blue;
+    }
+    input[type=email]:not(:focus):invalid {
+        background: #FFFFFF;
+        border: 1px solid #FF4B26;
+    }
+    input[type=password]:required:invalid {
+        background: #FFFFFF;
+        border: 1px solid #FF4B26;
+    }
+    input:valid {
+        background: #F6F7FA;        
         border: 1px solid #6FCF97;
     }
-    // .password_wrapper {
-        // position: relative;
-
-        // .placholder {
-        //     position: absolute;
-        //     right: 20px;
-        //     top: 36px;
-        //     font-family: Montserrat;
-        //     font-style: normal;
-        //     font-weight: 600;
-        //     font-size: 14px;
-        //     line-height: 24px;            
-        //     text-align: center;
-        //     color: #75777A;
-        //     z-index: -1;
-        // }
-        input::placeholder  {
-            display: block!important;
-            text-align: right;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 24px;            
-            color: #75777A;
-            z-index: 91;
-
+    .mess_err {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        align-self: center;
+        color: #FF4B26;
+    }
+    .btn {
+        width: 100%;
+        background: $primary_grey;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFF;
+        padding: 15px 0;
+        outline: none;
+        margin-bottom: 219px;
+    }
+    .active_btn {
+        background: $primary_blue;
+        cursor: pointer;
+        box-shadow: 0 17px 40px -13px rgba(6, 91, 234, .83);
+        &:hover {
+            background: #0451D2;
         }
-    // }
+        &:active {
+            background: $primary_blue;
+        }
+    }
 }
-// input:invalid:not(:placeholder-shown) + [data-validation-text] {
-// 	color: red !important;
-// 	display: block;
-// }
+.nav_bottom {
+    font-size: 14px;
+    line-height: 24px;
+    color: $grey_text;
+    text-decoration: none;
+    margin-right: 25px;
+    &:hover {
+        color: $black_primary;
+    }
+}
+

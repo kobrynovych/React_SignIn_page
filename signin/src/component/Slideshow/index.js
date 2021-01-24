@@ -19,10 +19,8 @@ export default function Slideshow() {
         autoplay: true,
         autoplaySpeed: 4000,
         pauseOnHover: true,
-        lazyLoad: true,
         initialSlide: 0
       };
-
     return (
       <>
         <Slider {...settings}>
