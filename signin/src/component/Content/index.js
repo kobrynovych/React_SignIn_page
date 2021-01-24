@@ -50,7 +50,7 @@ export default function Content() {
             name="password"
             type="password"
             required
-            minlength="4" 
+            minLength="4" 
             autoComplete="off"
             onChange={handleChange}
             onFocus={() => setIsFocusPassword(true)}
