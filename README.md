@@ -2,7 +2,7 @@
 
 App to show sliders and form sign in.
 
-https://igorkob.github.io/React_SignIn_page
+https://kobrynovych.github.io/React_SignIn_page
 
 ## Table of contents
 * [Instructions](#Instructions)
@@ -14,7 +14,7 @@ https://igorkob.github.io/React_SignIn_page
 
 First clone this repository.
 ```bash
-$ git clone https://github.com/IgorKob/React_SignIn_page.git
+$ git clone https://github.com/kobrynovych/React_SignIn_page.git
 ```
 
 Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
